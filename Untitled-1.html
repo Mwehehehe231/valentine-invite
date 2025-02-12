@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccd5;
+            margin: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #d63384;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no-btn {
+            background-color: #6c757d;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <button class="yes-btn" onclick="window.location.href='valentine.html'">Yes</button>
+        <button class="no-btn" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            document.querySelector(".no-btn").style.left = `${x}px`;
+            document.querySelector(".no-btn").style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
